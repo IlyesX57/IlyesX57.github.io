@@ -1,13 +1,49 @@
-<!DOCTYPE html>
-<!-- html:5 sa met tout les bases pour le html  -->
-<html lang="en">
+<!DOCTYPE html> 
+<!-- je defini le type de document-->
+<html lang="fr">
+<!-- je créer ma balise html
+qui va contenir toute ma page -->
 <head>
-    <meta charset="UTF-8">
-    <title>cours</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- relier le dossier css au html -->
+<meta charset="utf-8"></meta>
+<!-- On défini l'encodage de notre page -->
+<title>Cours HTML</title>
+<!-- On défini le titre de la page dans le navigateur -->
+<link rel="stylesheet" href="style.css">
+<!-- Sert a lier le fichier css a notre page web. MEILLEUR METHODE 
+A FAIRE  -->
+<style>
+#orange{color: orangered;}
+/* <!-- grace a l'id orange on peut demander a mettre uniquement la phrase voulu en orange
+mais l'id orange est utilisable que 1 fois  --> */
+.rouge{color: red;}
+/* grace a la classe rouge en peut mettre en rouge tout les phrase qui auront la classe
+rouge  */
+
+</style>
+
 </head>
-<body>
-    <p>Bonjour je suis de bonne humeur</p>
-</body>
+    <body>
+        <p>Je suis un <em>joli</em> paragraphe</p>
+        <!-- em pour mettre en italique -->
+        <p><em>je suis un paragraphe en italique</em></p>
+        <p><b>Je suis un paragraphe en gras</b><br></p>
+        <!-- b pour mettre en gras ET br pour revenir a la ligne  -->
+        <p><u>je suis souligné</u></p>
+        <!-- u pour souligner  -->
+        <p><s>Je suis barré</s></p>
+        <!-- S pour barré -->
+        <p style="color:green"> Je suis vert</p>
+        <!-- premiere méthode pour mettre un paragraphe en vert mais 
+        il ne faut pas utiliser cette méthode -->
+        <p id="orange">je suis orange</p>
+        <p class="rouge"> Je suis rouge</p>
+        <P id="fushia"> Bonjour je bois un café <b >très</b> chaud</P>
+        <h1>Je suis un gros titre</h1>
+        <h2>Je suis un gros titre</h2>
+        <h3>Je suis un gros titre</h3>
+        <h4>Je suis un gros titre</h4>
+        <h5>Je suis un gros titre</h5>
+        <h6>Je suis un gros titre</h6>
+        <!-- Des titres qui vont de h1 le plus grand jusqu'à h6 le plus petit  -->
+    </body>
 </html>
