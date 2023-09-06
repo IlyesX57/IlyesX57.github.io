@@ -1,0 +1,12 @@
+
+    tr, th, td, table {
+        border: 1px solid black;
+    }
+ /* permet de faire appairaitre visuellement 
+ le tableau  */
+ tr td {
+    text-align: center;
+ }
+ /* permet de centrer  */
+ 
+ 
