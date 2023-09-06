@@ -1,9 +1,12 @@
 
     tr, th, td, table {
         border: 1px solid black;
-    }
- /* permet de faire appairaitre visuellement 
+/* permet de faire appairaitre visuellement 
  le tableau  */
+        border-collapse: collapse;
+    } 
+    /* permet de coller les colones pour aoir un tableau plus propre */
+ 
  tr td {
     text-align: center;
  }
