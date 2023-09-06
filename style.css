@@ -1,15 +1,30 @@
 
     tr, th, td, table {
         border: 1px solid black;
-/* permet de faire appairaitre visuellement 
- le tableau  */
-        border-collapse: collapse;
-    } 
-    /* permet de coller les colones pour aoir un tableau plus propre */
+ /* permet de faire appairaitre visuellement  */
+ /* le tableau   */
+        /* border-collapse: collapse; */
+   /* permet de coller les colones pour avoir un tableau plus propre */
+
+        border-radius: 25px;
+/* border-radius : 50% arrondir les cases du tableau  */
+   } 
+ 
  
  tr td {
     text-align: center;
  }
  /* permet de centrer  */
  
- 
+ tr:nth-child(1) {background-color: red;}
+ /* permet de surligner en coulours la 1 ere ligne de chaque tableau  */
+
+.Bonjour tr{
+    background-color: blue;
+}
+/* permet de changer la couleur d'un tableau précisement en lui donnant une classe au préalable
+sur le html */
+
+#animal:hover{
+    cursor: pointer;
+}

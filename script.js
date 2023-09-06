@@ -52,7 +52,7 @@ function horloge(){
     
 }
 
-setInterval(horloge, 1000)
+// setInterval(horloge, 1000)
 
 // exercice : faire un compte a rebours qui part de 50
 // et qui fini a 0 et qui descend tout les 2 sec 
@@ -66,8 +66,56 @@ function montre (){
 }
 }
 
-setInterval(montre, 2000)
+// setInterval(montre, 2000)
 
 
+//array = tableau
+//type de variable qui est elle meme un tableau 
+            // 0       1   2      3
+var tab = [10,"bonjour",7.5,null]
+// cette variable est un tableau qui contien 4 valeur dans l'ordre 
+//10
+// "bonjour
+// 7.5
+// null
+
+console.log(tab[1])
+// on affiche la valeur qui ce trouve à la position 1 qui est bonjour
+console.log(tab[3])
+// on affich la valeur qui ce trouve à la position 3 qui est null
 
 
+// exo : faire un tableau qui ce nomme chmiblik qui comporte 
+//  5 valeur de type string et 5 valeur de type int ou float 
+
+var chmiblik = [
+"chien",
+"chat",
+"hamster",
+"pigeon",
+"rat",
+1,
+2,
+3,
+4,
+5
+]
+
+console.log(chmiblik)
+console.log(chmiblik.length)
+// connaitre la valeur du tableau
+
+let animal = "autruche"
+let temp = ""
+
+
+document.getElementById("animal").addEventListener("click",function(){
+    // je regarde le texte qui ce trouve dans cete élément
+temp = document.getElementById("animal").innerHTML
+// je modifie le texte qui ce trouve dans cette élément par la valeur
+// de la variable animal
+document.getElementById("animal").innerHTML = animal
+animal = temp
+})
+// getelementbyid sélectionne un élement qui à l'id défini sur animal dans ce cas
+// addeventlistener créer une écoute d'évenement
