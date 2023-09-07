@@ -174,4 +174,26 @@ for( index in tab_assoc) {
 
 // exercie n°2
 
+function diviseur (n) {
+var i = 2;
+var temp = '1' ;
+while (i <= n) { 
+if (n % i == 0) { 
+    temp = temp + ',' + i;
+}
+i++;
+}
+return temp
+}
+
+for(let index = 1; index <= 100; index++){
+    console.log(`Les diviseurs de ${index} sont: ${diviseur(index )}`)
+}
+
+
+
+
+
+
+
 
