@@ -32,4 +32,36 @@ sur le html */
 #message {
     resize: none;
 }
+/* je retire la possibilité de definir la taille du textearea */
 
+/* je créer une animation qui ce nomme animationimg au début elle va transform scalex en -1 
+puis elle va transform scalex en 1 t à la fin elle va transform scalex en -1 */
+@keyframes animationimg {
+0% {
+    transform: scaleX(-1);
+}
+50% {
+    transform: scaleX(1);
+}
+100%{
+    transform: scaleX(-1);
+}
+}
+
+img{
+    border: 3px dashed red;
+    border-radius: 25px;
+    opacity: 0,6;
+    animation: animationimg 8s ease-in infinite;
+    /* je dit que l'élément img joue l'aniation animationimg qu'elle doit durée 8s en fonctionnement
+    en ease-in et elle ce joue un nombre infini de fois  */
+}
+/* heigt auto et max-widht la photo devient récursive   */
+/* border enrourer l'image avec une bordure de couleur et border radius pour arrondir les bordure
+opacity pour définir l'opacité de notre image  */
+/* /* filter : blur ( flouter l'image ), filter : contrast ( changer le contraste ) */
+
+img:hover {
+    transform: scaleX(-1);
+}
+/* scaleY pour faire retourner l'image dans l'autre sens */

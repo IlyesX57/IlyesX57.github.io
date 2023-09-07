@@ -70,6 +70,7 @@ function montre (){
 
 
 //array = tableau
+// c un tableau indéxer
 //type de variable qui est elle meme un tableau 
             // 0       1   2      3
 var tab = [10,"bonjour",7.5,null]
@@ -119,3 +120,41 @@ animal = temp
 })
 // getelementbyid sélectionne un élement qui à l'id défini sur animal dans ce cas
 // addeventlistener créer une écoute d'évenement
+
+while(false){}
+// tandis que ce qu'il ce trouve dans les parantheses est vrai elle tourne 
+
+for(var i=0;i<10;i++) {
+    // je défini un variable i qui s'incrémenter de 1 tout les tours de la 
+    // boucle grace à i++
+    // et je lui demande de tourner jusqu'a que i soit supérieur à 10
+    console.log(i)
+}
+for(var i=0; i <chmiblik.length; i++) {
+    console.log(chmiblik[i])
+ // la boucle tourne jusquà la taille du tableau   
+if (i==3){
+    break
+}
+    
+
+}
+
+do {
+    console.log("DINGUERIE")
+// elle s'éxecute une fois même si la condition est fausse
+// et elle continue si de s"éxecuter si la condition est vrai 
+}while(false)
+
+for( index in chmiblik) {
+    console.log(index)
+}
+
+// tableau associatif
+var tab_assoc = {"ami": "chien", "cafe": "caféine" }
+
+for( index in tab_assoc) {
+    console.log(index)}
+
+    // exercice :
+    
