@@ -161,6 +161,8 @@ le tableau  -->
 <p id="animal">test</p>
 
 <form action="">
+    <fieldset> 
+        <legend> Mon formulaire</legend>
     <label for="Name">Nom : </label>
     <input type="next" name="name" id="name">
     <br><br>
@@ -173,7 +175,7 @@ le tableau  -->
     <input type="radio" name="sexe" id="masculin">
     <label for="masculin">Masculin</label>
     <br>
-    <input type="radio" name="sexe" id="autruche">
+    <input type="radio" name="sexe" id="autruche" checked>
     <label for="autruche">Autruche</label>
     <br>
     <input type="checkbox" name="me" id="me">
@@ -183,7 +185,8 @@ le tableau  -->
     <input type="submit" value="Envoyer !">
 <!-- permet de mettre une zone de text sur le site internet a fin de pouvoir ecrire 
     son nom,prénom,age  -->
-
+</fieldset>
+<!-- fieldset permet de cadrer le formulaire et mettre une légende -->
 
 </form>
 
@@ -209,6 +212,66 @@ le tableau  -->
 <br><br>
 <input type="submit" value="Submit">
 <input type="reset" value="Reset">
+
+</form>
+
+<br><br>
+
+<form>
+    <fieldset>
+        <legend>Selection the options list</legend>
+    <input type="checkbox" name="Checkbox" id="Checkbox">
+    <label for="Checkbox">Checkbox</label>  
+<br>
+    <input type="radio" name="Radio button 1" id="Radio button 1">
+    <label for="Radio button 1">Radio button 1</label>
+<br>
+    <input type="radio" name="Radio button 2" id="Radio button 2">
+    <label for="Radio button 2">Radio button 2</label>
+</fieldset>
+<br>
+
+</form>
+<fieldset>
+<legend>Input text </legend>
+<form action="">
+    <label for="Login Id">Login Id : </label>
+     <input type="text" name="Login Id" id="Login Id">
+     <br>
+     <form action="">
+        <label for="Password">Password : </label>
+         <input type="text" name="Password" id="Password">
+
+</fieldset>
+<br><br>
+
+<fieldset>
+    <legend> Employee Designation</legend>
+
+    <input type="checkbox" name="Software Engineer" id="Software Engineer" checked>
+    <label for="Software Engineer">Software Engineer</label> 
+<br>
+    <input type="checkbox" name="Data Analyst" id="Data Analyst">
+    <label for="Data Analyst">Data Analyst</label> 
+<br>
+    <input type="checkbox" name="Web developper" id="Web developper">
+    <label for="Web developper">Web developper</label> 
+<br>
+    <input type="checkbox" name="Senior Analyst" id="Senior Analyst">
+    <label for="Senior Analyst">Senior Analyst</label> 
+</fieldset>
+<br>
+    <input type="submit" value="Press">
+    <input type="reset" value="Reset">
+
+
+
+
+
+
+
+
+
 
 </form>
 
