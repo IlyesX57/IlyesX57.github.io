@@ -28,3 +28,7 @@ sur le html */
 #animal:hover{
     cursor: pointer;
 }
+
+#message {
+    resize: none;
+}
