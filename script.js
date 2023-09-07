@@ -143,7 +143,7 @@ if (i==3){
 do {
     console.log("DINGUERIE")
 // elle s'éxecute une fois même si la condition est fausse
-// et elle continue si de s"éxecuter si la condition est vrai 
+// et elle continue de s"éxecuter si la condition est vrai 
 }while(false)
 
 for( index in chmiblik) {
@@ -157,4 +157,21 @@ for( index in tab_assoc) {
     console.log(index)}
 
     // exercice :
-    
+    for(var i=10; i >= 0;i--) {
+         
+        
+        //   console.log("il reste" + i + "lignes à écrire") 
+    //  console.log("il reste" , i , "lignes à écrire")
+     console.log (`Il reste ${i}ligne${i <= 1 ?"" : "s"} à ecrire` )
+    // i <= 1 ? "" : 's'
+    // revien a faire 
+    // if ( i <=1) { // si vrai
+// console.log ('')
+    // } else { // sinon faux 
+    // console.log ('s')
+// }
+}
+
+// exercie n°2
+
+
