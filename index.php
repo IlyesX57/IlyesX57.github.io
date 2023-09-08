@@ -171,8 +171,24 @@ for ($i=0; $i < 10; $i++) {
     Sinon
         Tu es basique donc tu es nul
     */
+?> <br> 
 
-    ?> 
+<?php
+$tab_exo = [ "bras"=> true,
+"jambe" => 2  ];
+
+// le point d'exclamation (!) veut dire différent de
+// exemple : si bras est égal à vrai et que je fait
+// différent de il sera égal à faux 
+
+if($tab_exo["jambe"] == 0 && !$tab_exo ["bras"])   
+echo "tu est un e-tronc !";
+else if (!$tab_exo ['bras'])
+    echo"pas de bras pas de chocolat";
+else
+    echo " tu est basique donc tu est nul";
+
+?> 
    
 </body>
 </html>
