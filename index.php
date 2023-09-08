@@ -100,7 +100,7 @@ echo $tableau [4]. "<br>";
 
 echo '<pre>';
 var_dump($tableau);
-echo '<pre>';
+echo '</pre>';
 
 //EXERCICE
  $exo = [4, 12, 78, 98, 65];
@@ -189,6 +189,65 @@ else
     echo " tu est basique donc tu est nul";
 
 ?> 
+<br><br>
+<form action="" method ="post">
+    <label for="First name">First name : </label>
+    <br>
+        <input type="text" name="First name" id="First name">
+<br><br>
+    <label for="Last name">Laste Name : </label>
+      <br>  
+        <input type="Last name" name="Last name" id="Last name">
+<br><br>
+    <label for="email">E-mail : </label>
+     <br>
+        <input type="email" name="email" id="email">
+<br><br>
+<form action="">
+    <label for="Password">Password : </label>
+    <br>
+        <input type="password" name="Password" id="Password">
+<br><br>
+<form action="">
+    <label for="Confirm Password">Confirm Password : </label>
+    <br>
+        <input type="Confirm password" name="Confirm Password" id="Confirm Password">
+<br><br>
+<p><b>Gender</b>
+<br>
+
+<input type="radio" name="gender" id="male" value="male"> 
+<label for="Male">Male</label><input type="radio" name="gender" id="female" value="female">
+<label for="Female">Female</label>
+<input type="radio" name="gender" id="others" value="others" >
+<label for="other">Other</label>
+    
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+<?php
+
+// si method post est rentrer dans le formulaire il faut utiliser 
+// $_post
+//  sinon si la method get est rentrer dans le formulaire il faut 
+//  utiliser $_GET
+// la fonction isset sert à regarder si la variable qui lui est 
+// donner est bien défini dans ce cas si elle regarde
+// si la variable $_POST est défini 
+if(isset($_POST)) {
+    echo'<pre>';var_dump($_POST); echo '</pre>';
+    echo $_post['First name'];
+    // sha1 hash le mot c'est a dire le compléxifi et 
+    // le rend invisible
+    echo sha1($_POST['password']);
+    echo md5($_post["password"]);
+}
+?>
    
+
+
+
+
 </body>
 </html>
