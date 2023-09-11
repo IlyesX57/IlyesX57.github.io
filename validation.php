@@ -1,4 +1,5 @@
 <?php
+require_once ('db.php');
 if(isset($_POST) && !empty($_POST)) {
     echo'<pre>';var_dump($_POST); echo '</pre>';
     echo $_post['First name'];

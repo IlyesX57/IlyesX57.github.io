@@ -1,5 +1,6 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'ILYES', 'Ilyesdu57')
+// quand le fichier est lu et qu'on veux que le fichier db sois lu aussi
+require_once ('db.php');
 // VARIABLE pour pouvoir recup les donner du site internet 
 ?>
 <!DOCTYPE html>
