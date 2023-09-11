@@ -16,5 +16,6 @@ if(isset($_POST) && !empty($_POST)) {
     md5($_POST['Password']),
     $_POST['gender']
     ));
+    header('LOcation: index.php');
 }
     ?> 
