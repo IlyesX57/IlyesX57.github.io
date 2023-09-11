@@ -194,7 +194,7 @@ else
 
 ?> 
 <br><br>
-<form action="" method ="post">
+<form action="validation.php" method ="post">
     <label for="First name">First name : </label>
     <br>
         <input type="text" name="Firstname" id="Firstname">
@@ -239,22 +239,8 @@ else
 // la fonction isset sert à regarder si la variable qui lui est 
 // donner est bien défini dans ce cas si elle regarde
 // si la variable $_POST est défini 
-if(isset($_POST)) {
-    echo'<pre>';var_dump($_POST); echo '</pre>';
-    echo $_post['First name'];
-    // sha1 hash le mot c'est a dire le compléxifi et 
-    // le rend invisible
-    echo sha1($_POST['Password']);
-    echo md5($_post["Password"]);
 
-    $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname,email, password, gender) VALUES (?,?,?,?,?)');
-    $insert->execute(array(
-    $_POST['Firstname'],
-    $_POST['Lastname'], 
-    $_POST['email'],
-    md5($_POST['Password']),
-    $_POST['gender']
-    ));
+
     // je prépare ma commande
     $select = $bdd->prepare('SELECT * FROM utilisateur WHERE gender= ?;');
      // je l'éxécute en lui donnant une valeur à la place des ?
@@ -266,9 +252,50 @@ if(isset($_POST)) {
     echo '<pre>';
     var_dump($total);
     echo '</pre>'; 
-}
+
 
 ?>
+
+<form action="" method ="post">
+    <label for="Yourname">Your name : </label>
+    <br>
+        <input type="text" name="Yourname" id="Yourname">
+        <br><br>
+        <label for="mail">Your mail : </label>
+    <br>
+        <input type="Yourmail" name="Yourmail" id="Yourmail"> 
+        <br><br>
+        <label for="Yourmessage">Your message : </label>
+    <br>
+        <input type="text" name="Yourmessage" id="Yourmessage">
+        <br><br>
+        <label for="number">Give me a number : </label>
+    <br>
+        <input type="number" name="Givemeanumber" id="Givemeanumber">
+        
+        
+        <br><br>
+    <input type="submit" value="Envoyer">
+    </form>
+<?php
+    if(isset($_POST) && !empty($_POST)) {
+        settype($_post['Giveanumber'],'integer');
+  
+    
+
+    $insert = $bdd->prepare('INSERT INTO exo(Yourname, Yourmail,Yourmessage, Givemeanumber) VALUES (?,?,?,?)');
+    $insert->execute(array(
+    $_POST['Yourname'],
+    $_POST['Yourmail'], 
+    $_POST['Yourmessage'],
+    $_POST['Givemeanumber']
+    ));
+    }
+    ?>
+
+
+
+
    
 
 
