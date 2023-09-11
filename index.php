@@ -1,3 +1,7 @@
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'ILYES', 'Ilyesdu57')
+// VARIABLE pour pouvoir recup les donner du site internet 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -193,11 +197,11 @@ else
 <form action="" method ="post">
     <label for="First name">First name : </label>
     <br>
-        <input type="text" name="First name" id="First name">
+        <input type="text" name="Firstname" id="Firstname">
 <br><br>
     <label for="Last name">Laste Name : </label>
       <br>  
-        <input type="Last name" name="Last name" id="Last name">
+        <input type="text" name="Lastname" id="Lastname">
 <br><br>
     <label for="email">E-mail : </label>
      <br>
@@ -240,9 +244,30 @@ if(isset($_POST)) {
     echo $_post['First name'];
     // sha1 hash le mot c'est a dire le compléxifi et 
     // le rend invisible
-    echo sha1($_POST['password']);
-    echo md5($_post["password"]);
+    echo sha1($_POST['Password']);
+    echo md5($_post["Password"]);
+
+    $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname,email, password, gender) VALUES (?,?,?,?,?)');
+    $insert->execute(array(
+    $_POST['Firstname'],
+    $_POST['Lastname'], 
+    $_POST['email'],
+    md5($_POST['Password']),
+    $_POST['gender']
+    ));
+    // je prépare ma commande
+    $select = $bdd->prepare('SELECT * FROM utilisateur WHERE gender= ?;');
+     // je l'éxécute en lui donnant une valeur à la place des ?
+    $select->execute(array('male'));
+    // je recupere tt ce que me renvoie ma comande
+    $total = $select->fetchAll(PDO::FETCH_ASSOC);
+
+// je l'affiche 
+    echo '<pre>';
+    var_dump($total);
+    echo '</pre>'; 
 }
+
 ?>
    
 
