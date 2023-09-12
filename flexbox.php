@@ -36,8 +36,30 @@
     </div>
 <br><br>
     <div class="exercice">
+    <div class="cote_gauche">
+        <div class="long violet"></div>
+        <div class="gauche">
+            <div class="petite Orange"></div>
+            <div class="trespetit red"></div>
+    </div>
+        <div class="droite bleu"></div>
+    </div>
 
-
+    <div class="cote_droit">
+        <div class="gauche">
+            <div class="petite1 red"></div>
+            <div class="petite2 bleu"></div>
+            <div class="petite3 Orange"></div>
+        </div>
+        <div class="droite">
+            <div class="petite1 bleu"></div>
+            <div class="petite2 Orange"></div>
+            <div class="petite3 red"></div>
+        </div>
+        <div class="long violet"></div>
+        
+    </div>
+    
        
 </body>
 </html>

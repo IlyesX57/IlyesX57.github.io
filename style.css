@@ -1,36 +1,39 @@
+@font-face {
+    font-family: Bonello-Regular;
+    src: url(./Bonello-Regular.otf);
+}
+tr, th, td, table {
+    border: 1px solid black;
+/* permet de faire appairaitre visuellement  */
+/* le tableau   */
+    /* border-collapse: collapse; */
+/* permet de coller les colones pour avoir un tableau plus propre */
 
-    tr, th, td, table {
-        border: 1px solid black;
- /* permet de faire appairaitre visuellement  */
- /* le tableau   */
-        /* border-collapse: collapse; */
-   /* permet de coller les colones pour avoir un tableau plus propre */
-
-        border-radius: 25px;
+    border-radius: 25px;
 /* border-radius : 50% arrondir les cases du tableau  */
-   } 
- 
- 
- tr td {
-    text-align: center;
- }
- /* permet de centrer  */
- 
- tr:nth-child(1) {background-color: red;}
- /* permet de surligner en coulours la 1 ere ligne de chaque tableau  */
+} 
+
+
+tr td {
+text-align: center;
+}
+/* permet de centrer  */
+
+tr:nth-child(1) {background-color: red;}
+/* permet de surligner en coulours la 1 ere ligne de chaque tableau  */
 
 .Bonjour tr{
-    background-color: blue;
+background-color: blue;
 }
 /* permet de changer la couleur d'un tableau précisement en lui donnant une classe au préalable
 sur le html */
 
 #animal:hover{
-    cursor: pointer;
+cursor: pointer;
 }
 
 #message {
-    resize: none;
+resize: none;
 }
 /* je retire la possibilité de definir la taille du textearea */
 
@@ -38,23 +41,23 @@ sur le html */
 puis elle va transform scalex en 1 t à la fin elle va transform scalex en -1 */
 @keyframes animationimg {
 0% {
-    transform: scaleX(-1);
+transform: scaleX(-1);
 }
 50% {
-    transform: scaleX(1);
+transform: scaleX(1);
 }
 100%{
-    transform: scaleX(-1);
+transform: scaleX(-1);
 }
 }
 
 img{
-    border: 3px dashed red;
-    border-radius: 25px;
-    opacity: 0,6;
-    animation: animationimg 8s ease-in infinite;
-    /* je dit que l'élément img joue l'aniation animationimg qu'elle doit durée 8s en fonctionnement
-    en ease-in et elle ce joue un nombre infini de fois  */
+border: 3px dashed red;
+border-radius: 25px;
+opacity: 0,6;
+animation: animationimg 8s ease-in infinite;
+/* je dit que l'élément img joue l'aniation animationimg qu'elle doit durée 8s en fonctionnement
+en ease-in et elle ce joue un nombre infini de fois  */
 }
 /* heigt auto et max-widht la photo devient récursive   */
 /* border enrourer l'image avec une bordure de couleur et border radius pour arrondir les bordure
@@ -62,95 +65,207 @@ opacity pour définir l'opacité de notre image  */
 /* /* filter : blur ( flouter l'image ), filter : contrast ( changer le contraste ) */
 
 img:hover {
-    transform: scaleX(-1);
+transform: scaleX(-1);
 }
 /* scaleY pour faire retourner l'image dans l'autre sens */
 
 .conteneur {
-    background-color: black;
-    height: 600px;
-    width: 100%; /* Prend toute la largeur de la page */
-    display: flex; /* L'affichage ce met en mode flex*/
-    justify-content: space-around;
-    /* justify-content joue avec la largeur quand le flex-direction est en row 
-    quand flex-direction est en column il joue en hauteur*/
-    align-items:flex-start;
-    /* align-items fait la même chose que justify-content mais inverser c'est à dire 
-    qu'il joue avec la hauteur quand flex-direction est en row et en largeur quand 
-    il est en column*/
-    /* align-content: space-around; */
-    /* Fait la même chose que align-items mais il gère aussi les multilignes de conteneur */
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* le flex-wrap sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur 
-    quand il est en mode wrap
-    (Par défaut il est en mode nowrap)
-    */
+background-color: black;
+height: 600px;
+width: 100%; /* Prend toute la largeur de la page */
+display: flex; /* L'affichage ce met en mode flex*/
+justify-content: space-around;
+/* justify-content joue avec la largeur quand le flex-direction est en row 
+quand flex-direction est en column il joue en hauteur*/
+align-items:flex-start;
+/* align-items fait la même chose que justify-content mais inverser c'est à dire 
+qu'il joue avec la hauteur quand flex-direction est en row et en largeur quand 
+il est en column*/
+/* align-content: space-around; */
+/* Fait la même chose que align-items mais il gère aussi les multilignes de conteneur */
+flex-direction: row;
+flex-wrap: wrap;
+/* le flex-wrap sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur 
+quand il est en mode wrap
+(Par défaut il est en mode nowrap)
+*/
 
 }
 
 .rouge{
-    background-color: red;
-    width: 25%;
-    height: 75px;
+background-color: red;
+width: 25%;
+height: 75px;
 }
 
 .vert{
-    background-color: green;
-    width: 25%;
-    height: 75px;
+background-color: green;
+width: 25%;
+height: 75px;
 }
 .orange{
-    background-color: orange;
-    width: 25%;
-    height: 75px;
+background-color: orange;
+width: 25%;
+height: 75px;
 }
 
 .grand {
-    background-color: darkgray;
-    width: 75%;
-    height: 500px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+background-color: darkgray;
+width: 75%;
+height: 500px;
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
 .petit {
-    background-color: aquamarine;
-    width: 45%;
-    height: 90%;
-    display: flex;
-    align-items: flex-end;
+background-color: aquamarine;
+width: 45%;
+height: 90%;
+display: flex;
+align-items: flex-end;
 }
 .petit h1 {
-    color: darkgray;
-    font-size: 3em;
-    margin: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+color: darkgray;
+font-size: 3em;
+margin: 15px;
+font-family: Bonello-Regular
 }
 #secondpetit {
-    background-color: transparent;
-    align-content: space-between;
-    justify-content: space-between;
-    flex-wrap: wrap;
+background-color: transparent;
+align-content: space-between;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 .moyen {
-    width: 100%;
-    height: 30%;
-    background-color: aquamarine;;
+width: 100%;
+height: 30%;
+background-color: aquamarine;;
 }
 
 .toutpetit {
-    width: 45%;
-    height: 30%;
-    background-color: aquamarine;
+width: 45%;
+height: 30%;
+background-color: aquamarine;
 }
+
+
 .exercice {
-    background-color: purple;
-    height: 600px;
+background-color:blueviolet;
+height: 600px;
+width: 70%;
+display:flex;
+justify-content: space-around;
+align-items:center;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.cote_gauche{
+/* background-color: aqua; */
+width: 40%;
+height: 70%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.cote_droit{
+/* background-color: aqua; */
+width: 40%;
+height: 70%;
+}
+.long{
+width: 100%;
+height: 20%;
+}
+.cote_gauche .gauche{
+/* background-color: beige; */
+width: 50%;
+height: 75%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+.cote_gauche .droite{
+
+width: 45%;
+height: 75%;
+}
+
+.cote_gauche .gauche .petite{
     width: 100%;
-    display:flex;
-    justify-content: space-around;
-    align-items:flex-start;
-    flex-direction: row;
+    height: 65%;
+}
+
+.cote_gauche .gauche .trespetit{
+    width: 100%;
+    height: 25%;
+}
+
+.cote_droit{
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70%;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cote_droit .gauche{
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cote_droit .gauche .petite1{
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .gauche .petite2{
+    width: 100%;
+    height: 20%;
+}
+.cote_droit .gauche .petite3{
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .droite{
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_droit .droite .petite1{
+    width: 100%;
+    height: 40%;
+}
+.cote_droit .droite .petite2{
+    width: 100%;
+    height: 25%;
+}
+.cote_droit .droite .petite3{
+    width: 100%;
+    height: 25%;
+}
+.cote_droit .long{
+    height: 30%;
+}
+
+
+.violet{
+background-color: violet;
+}
+.Orange{
+background-color: orange;
+}
+.red{
+background-color: red;
+}
+.bleu{
+background-color: blue;
 }
