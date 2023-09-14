@@ -19,8 +19,13 @@ l'heure avec un formulaire  -->
 
 <label for="seconde">seconde(s) :</label>
 <input type="number" name="seconde" id="seconde" value=0 min=0 max=59>
+<input type="submit" value="Régler">
+<button type="button" id="pause">Pause</button>
+<button type="button" id="play">Play</button>
 
 </form>
+
+
 
 <?php
 
@@ -29,7 +34,7 @@ echo '<script>
 var heure = '.(!empty($_POST["heure"]) ? $_POST["heure"] : '0').'
 var minute = '.(!empty($_POST["minute"]) ? $_POST_["minute"] : '0').'
 var seconde = '.(!empty($_POST["seconde"]) ? $_POST_["seconde"] : '0').'
-setInterval (function() {
+var Interval = setInterval (function() {
    document.getElementById("minuteur").innerHTML=
     `${(heure < 10 ? "0":"") + heure}:${(minute < 10 ? "0":"") + minute}:${(seconde < 10 ? "0":"") + seconde}`
     if (seconde <= 0) return
@@ -47,9 +52,16 @@ setInterval (function() {
         }
     }
 }, 1000)
+function PauseTimer() {
+    clearInterval(Interval)
+    document.getElementById("minuteur").style.color =red
+}
 
-</script>'
+</script>';
+
 ?>
+
+
 
 
 </body>
