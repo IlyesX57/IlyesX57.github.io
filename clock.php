@@ -20,6 +20,7 @@
         <input type="submit" value="Régler">    
         <button type="button" id="pause" onclick="PauseTimer()">Pause</button>
         <button type="button" id="play">Play</button>
+        <button type="button" id="reset" onclick="Resettimer()">Reset</button>
     </form>
 
 
@@ -28,9 +29,12 @@
         var heure = ' . (!empty($_POST["heure"]) ? $_POST["heure"] : '0') . '
         var minute = ' . (!empty($_POST["minute"]) ? $_POST["minute"] : '0') . '
         var seconde = ' . (!empty($_POST["seconde"]) ? $_POST["seconde"] : '0') . '
-        var interval = setInterval(function() {            
+        function affichage(){ 
             document.getElementById("minuteur").innerHTML= 
             `${(heure < 10 ? "0" : "") + heure}:${(minute < 10 ? "0" : "") + minute}:${(seconde < 10 ? "0" : "") + seconde}`
+        }
+        function timer() { 
+            affichage()           
             if (seconde <= 0 && minute <= 0 && heure <= 0 ) return
 
             if (seconde == 0) {
@@ -46,11 +50,25 @@
                 }
             }
             seconde--
-        },  1000)
+        }
+        var interval = setInterval(timer, 1000)
+        
         function PauseTimer() {
             clearInterval(interval)
+            interval = null
             document.getElementById("minuteur").style.color = "red"
         }
+        function Resettimer(){
+            heure = 0
+            minute = 0
+            seconde = 0
+        }
+        document.getElementById("play").addEventListener("click", function() {
+        if (interval == null) {
+            interval = setInterval(timer, 1000)
+            document.getElementById("minuteur").style.color = "black" }
+            
+        } )
     </script>';
     ?>
     <!-- Faite un minuteur numérique 

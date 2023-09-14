@@ -1,0 +1,12 @@
+.white{
+    color: white;
+}
+.black{
+    color: black;
+}
+.fond{
+    background-color: black;
+}
+tr, th, td, table {
+    border: 1px solid black;
+    border-collapse: collapse;}
