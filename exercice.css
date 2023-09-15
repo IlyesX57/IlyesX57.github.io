@@ -44,3 +44,6 @@ tr:hover td {
     background-color: grey; /* Couleur de surbrillance bleue pour le premier td de la ligne */
     color: black;/
 }
+table thead th, table tfoot th {
+    background-color: #005500;
+    padding: 5px;}
