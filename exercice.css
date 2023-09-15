@@ -6,7 +6,41 @@
 }
 .fond{
     background-color: black;
+
 }
+
+.yellow{
+    background-color: yellow;
+}
+
 tr, th, td, table {
-    border: 1px solid black;
+    border: 3px solid black;
     border-collapse: collapse;}
+
+img{
+    border: 3px;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+}  
+.center{
+    display: block;
+    margin: 0 auto;
+
+}
+.center-text{
+    text-align: center;
+
+}
+tr:hover{
+    background-color: grey;
+}
+td {
+    padding: 8px;
+    border: 3px solid black;
+    transition: background-color 0.3s;
+}
+tr:hover td {
+    background-color: grey; /* Couleur de surbrillance bleue pour le premier td de la ligne */
+    color: black;/
+}
