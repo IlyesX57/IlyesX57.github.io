@@ -72,5 +72,23 @@
         document.getElementById('erase').addEventListener('click', Stop)
 
     </script>
+
+
+
+    <h2>Inscription</h2>
+<p><?php echo $message; ?></p>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" value="<?php echo $nom; ?>"><br><br>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" value="<?php echo $prenom; ?>"><br><br>
+
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" value="<?php echo $username; ?>"><br><br>
+
+    <input type="submit" value="S'inscrire">
+</form>
 </body>
 </html>
