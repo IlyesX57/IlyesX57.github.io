@@ -35,9 +35,10 @@
 
         if (isset($_POST) && !empty($_POST)) {
             echo '<pre>'; var_dump($_POST); echo '</pre>'; 
-            $select = $bdd->prepare('SELECT code FROM atm WHERE code=?');
+            $select = $bdd->prepare('SELECT code FROM atm WHERE code=? and username=?');
             $select->execute(array(
-                $_POST['number']
+                sha1($_POST['number']),
+                $_POST['username']
             ));
             $select = $select->fetchAll();
             if (count ($select) > 0)
