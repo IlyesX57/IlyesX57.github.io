@@ -18,18 +18,21 @@
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) {
-        $select = $bdd->prepare('SELECT * FROM users WHERE username=? AND password=?');
+        $select = $bdd->prepare('SELECT * FROM users WHERE (username=:login OR email=:login) AND password=?');
         $select->execute(array(
-            $_POST['username'],
-            sha1($_POST['password'])
+            'login' => $_POST['username'],
+            'pass' => $_POST['password']
         ));
         $select = $select->fetchAll(PDO::FETCH_ASSOC);
         if (!empty($select)) {
             session_start();
             $_SESSION = $select;
             header('location: index.php');
-        }
-    }
-    ?>
+        } else
+        echo "<script> alert('Le mot de passe ou le pseudo n\'est pas bon') </script>";
+}
+?>
+    
+    
 </body>
 </html>
