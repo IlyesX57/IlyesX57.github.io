@@ -1,3 +1,12 @@
+<?php
+require_once('../../function/db.php');
+session_start();
+if (!empty($_SESSION)) header('Location: index.php');
+if (!empty($_GET)) {
+    if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à était modifie") </script>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
