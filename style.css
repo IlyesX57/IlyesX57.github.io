@@ -349,7 +349,7 @@ div.num:hover, button.num:hover {
 #invisible {
     display: none;
 }
-
+ HEAD
 input:required:valid {
     outline: none;
     border-color: chartreuse;
@@ -357,4 +357,18 @@ input:required:valid {
 input:required:invalid {
     outline: none;
     border-color: red;
+}
+
+input{
+    background: none;
+    border-radius: 10px;
+    margin: 2px;
+    outline: none;
+}
+
+input:required:valid {
+    background-color: chartreuse;
+}
+input:required:invalid {
+    background-color: red;
 }
