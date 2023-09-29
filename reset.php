@@ -1,5 +1,9 @@
 <?php 
-require_once('db.php');
+require_once('../../function/db.php');
+
+
+require_once('../../function/db.php');
+
 if (isset($_GET) && !empty($_GET)) {
     $select = $bdd->prepare('SELECT * FROM users WHERE id=? AND token=?');
     $select->execute(array(
@@ -7,8 +11,10 @@ if (isset($_GET) && !empty($_GET)) {
         $_GET['token']
     ));
     $select = $select->fetchAll();
-    if (empty($select))
+
+    if (empty($select)) 
         header('Location: login.php');
+    elseif ($select['confirm'] == 0) header('Location: login.php');
 } else 
     header('Location: login.php');
 
@@ -18,18 +24,18 @@ if (isset($_GET) && !empty($_GET)) {
 <head>
     <meta charset="UTF-8">
     <title>Changement du mot de passe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style/connexion.css">
 </head>
 <body>
     <form action="" method="post">
-    <pre>
+        <pre>
             <h1>Modification du mot de passe</h1>
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" required>
             <br>
             <label for="confirm_password">Confirmation du mot de passe :</label>
             <input type="password" name="confirm_password" id="confirm_password" required oninput="ChangeValue()">
-             <br>
+            <br>
             <input type="submit" value="Modifier">
         </pre>
     </form>
@@ -44,12 +50,11 @@ if (isset($_GET) && !empty($_GET)) {
             ));
             $update = $update->rowCount();
             if ($update > 0) 
-                header('Location: login.php?success=reset');
+                header('Location: login.php');
             else
                 echo 'Une erreur c\'est produite ';
         }
     ?>
-
     <script>
         function ChangeValue() {
             let Password = document.getElementById('password')
@@ -61,8 +66,5 @@ if (isset($_GET) && !empty($_GET)) {
                 confirmPassword.setCustomValidity('Les mots de passe doivent être identique')      
         }
     </script>
-
-        
-    </form>
 </body>
 </html>
