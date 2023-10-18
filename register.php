@@ -6,7 +6,7 @@ require_once('db.php')
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../../style/connexion.css">
+    <link rel="stylesheet" href="connexion.css">
 </head>
 <body>
     <form action="" method="post">
@@ -18,10 +18,10 @@ require_once('db.php')
             <input type="text" name="lastname" id="lastname" required>
             <br>
             <label for="username">Pseudo :</label>
-            <input type="text" name="username" id="username" oninput='SingleUsername()' required>
+            <input type="text" name="username" id="username">
             <br>
             <label for="password">Mot de passe :</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password">
             <br>
             <label for="confirm_password">Confirmation du mot de passe :</label>
             <input type="password" name="confirm_password" id="confirm_password" oninput="ChangeValue()" required>        

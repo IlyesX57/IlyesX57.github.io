@@ -37,6 +37,8 @@ require_once('dbCat.php');
                             $selectRes = $bdd->prepare('SELECT * FROM reservation');
                             $selectRes->execute();
                             $selectRes = $selectRes->fetchAll();
+
+
                             
                             // for ($i=0; $i < count($select); $i++) { // Je fait une boucle qui tourne le nombre de ligne récupérer
                             //     echo "<option value='" . $select[$i]['id'] . "'>" . $select[$i]['prenom'] . "</option>";
